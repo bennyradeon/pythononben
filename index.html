@@ -3,232 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modul Algoritma & Pemrograman Python | Edisi Super Lengkap</title>
+    <title>Modul Algoritma & Pemrograman Python | Super Lengkap + Penjelasan Sintaks</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* CSS sama dengan sebelumnya, dengan sedikit penyesuaian */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #eef2f6;
-            color: #1e293b;
-            line-height: 1.7;
-            padding: 2rem 1.5rem;
-        }
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 40px;
-            box-shadow: 0 30px 60px -15px rgba(0,20,40,0.3);
-            overflow: hidden;
-            padding: 3rem 3rem;
-        }
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            color: #0f3b5e;
-            margin-top: 2.5rem;
-            margin-bottom: 1.2rem;
-            letter-spacing: -0.02em;
-        }
-        h1 {
-            font-size: 3.2rem;
-            border-bottom: 5px solid #2563eb;
-            padding-bottom: 0.7rem;
-            background: linear-gradient(145deg, #0b2b44, #1e4a7a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-bottom-color: #2563eb;
-        }
-        h2 {
-            font-size: 2.4rem;
-            border-bottom: 3px solid #9bb7d4;
-            padding-bottom: 0.5rem;
-        }
-        h3 {
-            font-size: 1.9rem;
-            color: #1e4a7a;
-            margin-top: 2rem;
-        }
-        h4 {
-            font-size: 1.4rem;
-            color: #2563eb;
-            margin-bottom: 0.8rem;
-        }
-        p, li {
-            font-size: 1.12rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        pre {
-            background: #0d1b2a;
-            color: #dee4f0;
-            padding: 1.8rem;
-            border-radius: 24px;
-            overflow-x: auto;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.98rem;
-            margin: 2rem 0;
-            border: 1px solid #2d3b4f;
-            box-shadow: 0 12px 18px -8px rgba(0,0,0,0.4);
-        }
-        code {
-            font-family: 'JetBrains Mono', monospace;
-            background: #e4eaf1;
-            padding: 0.3rem 0.7rem;
-            border-radius: 10px;
-            font-size: 1rem;
-        }
-        pre code {
-            background: none;
-            color: inherit;
-            padding: 0;
-        }
-        .explanation {
-            background: #f0f7ff;
-            border-radius: 20px;
-            padding: 1.5rem 2rem;
-            margin: 1.8rem 0;
-            border-left: 8px solid #2563eb;
-        }
-        .try-box {
-            background: #fef6e6;
-            border: 2px dashed #f59e0b;
-            padding: 1.5rem 2rem;
-            border-radius: 28px;
-            margin: 2rem 0;
-        }
-        .soal {
-            background: #e6f7ee;
-            border-left: 8px solid #10b981;
-            padding: 1.8rem 2.2rem;
-            border-radius: 24px;
-            margin: 2.5rem 0;
-            position: relative;
-        }
-        .soal h4 {
-            color: #0b6e4f;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .jawaban {
-            background: #f1f9f9;
-            border-radius: 16px;
-            padding: 1rem 1.5rem;
-            margin-top: 1rem;
-            border: 1px solid #10b981;
-            display: none;
-        }
-        .btn-jawaban {
-            background: #10b981;
-            color: white;
-            border: none;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 0.8rem;
-            transition: 0.2s;
-            border: 1px solid #0d9e6e;
-        }
-        .btn-jawaban:hover {
-            background: #0d9e6e;
-            transform: scale(1.02);
-        }
-        .insight {
-            background: #eef2fb;
-            border-radius: 18px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border: 1px solid #a5c9ff;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-        }
-        th {
-            background: #1e3a5f;
-            color: white;
-            font-weight: 600;
-            padding: 1rem;
-        }
-        td {
-            background: #fafcff;
-            padding: 0.9rem;
-            border-bottom: 1px solid #ced9e8;
-        }
-        .btn {
-            background: #2563eb;
-            color: white;
-            padding: 0.6rem 1.6rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin: 1rem 0;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-        .nav-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            background: #e9edf2;
-            padding: 1.2rem 1.5rem;
-            border-radius: 60px;
-            margin: 2rem 0;
-            justify-content: center;
-        }
-        .nav-pills a {
-            background: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 40px;
-            font-weight: 500;
-            color: #1e293b;
-            text-decoration: none;
-            border: 1px solid #b0c4de;
-            transition: 0.2s;
-        }
-        .nav-pills a:hover {
-            background: #2563eb;
-            color: white;
-            border-color: #2563eb;
-        }
-        footer {
-            margin-top: 4rem;
-            text-align: center;
-            border-top: 2px dashed #b0c4de;
-            padding-top: 2rem;
-            color: #5e6f8d;
-        }
-        .faq {
-            background: #faf6e9;
-            border-radius: 20px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .kode-baik {
-            background: #e6f7e6;
-            border-left: 6px solid #2e7d32;
-        }
+        /* CSS sama seperti sebelumnya, pastikan responsif */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #eef2f6; color: #1e293b; line-height: 1.7; padding: 2rem 1.5rem; }
+        .container { max-width: 1300px; margin: 0 auto; background: white; border-radius: 40px; box-shadow: 0 30px 60px -15px rgba(0,20,40,0.3); overflow: hidden; padding: 3rem 3rem; }
+        h1, h2, h3, h4 { font-weight: 600; color: #0f3b5e; margin-top: 2.5rem; margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+        h1 { font-size: 3.2rem; border-bottom: 5px solid #2563eb; padding-bottom: 0.7rem; background: linear-gradient(145deg, #0b2b44, #1e4a7a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom-color: #2563eb; }
+        h2 { font-size: 2.4rem; border-bottom: 3px solid #9bb7d4; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.9rem; color: #1e4a7a; margin-top: 2rem; }
+        h4 { font-size: 1.4rem; color: #2563eb; margin-bottom: 0.8rem; }
+        p, li { font-size: 1.12rem; color: #2c3e50; margin-bottom: 1rem; }
+        pre { background: #0d1b2a; color: #dee4f0; padding: 1.8rem; border-radius: 24px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.98rem; margin: 2rem 0; border: 1px solid #2d3b4f; box-shadow: 0 12px 18px -8px rgba(0,0,0,0.4); }
+        code { font-family: 'JetBrains Mono', monospace; background: #e4eaf1; padding: 0.3rem 0.7rem; border-radius: 10px; font-size: 1rem; }
+        pre code { background: none; color: inherit; padding: 0; }
+        .explanation { background: #f0f7ff; border-radius: 20px; padding: 1.5rem 2rem; margin: 1.8rem 0; border-left: 8px solid #2563eb; }
+        .try-box { background: #fef6e6; border: 2px dashed #f59e0b; padding: 1.5rem 2rem; border-radius: 28px; margin: 2rem 0; }
+        .soal { background: #e6f7ee; border-left: 8px solid #10b981; padding: 1.8rem 2.2rem; border-radius: 24px; margin: 2.5rem 0; position: relative; }
+        .soal h4 { color: #0b6e4f; display: flex; align-items: center; gap: 10px; }
+        .jawaban { background: #f1f9f9; border-radius: 16px; padding: 1rem 1.5rem; margin-top: 1rem; border: 1px solid #10b981; display: none; }
+        .btn-jawaban { background: #10b981; color: white; border: none; padding: 0.4rem 1.2rem; border-radius: 40px; font-weight: 600; cursor: pointer; margin-top: 0.8rem; transition: 0.2s; border: 1px solid #0d9e6e; }
+        .btn-jawaban:hover { background: #0d9e6e; transform: scale(1.02); }
+        .insight { background: #eef2fb; border-radius: 18px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid #a5c9ff; }
+        table { width: 100%; border-collapse: collapse; margin: 2rem 0; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 12px rgba(0,0,0,0.1); }
+        th { background: #1e3a5f; color: white; font-weight: 600; padding: 1rem; }
+        td { background: #fafcff; padding: 0.9rem; border-bottom: 1px solid #ced9e8; }
+        .btn { background: #2563eb; color: white; padding: 0.6rem 1.6rem; border-radius: 40px; text-decoration: none; font-weight: 600; display: inline-block; margin: 1rem 0; transition: 0.2s; border: none; cursor: pointer; }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .nav-pills { display: flex; flex-wrap: wrap; gap: 0.8rem; background: #e9edf2; padding: 1.2rem 1.5rem; border-radius: 60px; margin: 2rem 0; justify-content: center; }
+        .nav-pills a { background: white; padding: 0.6rem 1.4rem; border-radius: 40px; font-weight: 500; color: #1e293b; text-decoration: none; border: 1px solid #b0c4de; transition: 0.2s; }
+        .nav-pills a:hover { background: #2563eb; color: white; border-color: #2563eb; }
+        footer { margin-top: 4rem; text-align: center; border-top: 2px dashed #b0c4de; padding-top: 2rem; color: #5e6f8d; }
+        .faq { background: #faf6e9; border-radius: 20px; padding: 1.5rem; margin: 1.5rem 0; }
+        .syntax-box { background: #e8eef9; border: 2px solid #2563eb; border-radius: 16px; padding: 1rem 1.5rem; margin: 1rem 0; }
     </style>
 </head>
 <body>
@@ -237,7 +50,7 @@
     <div style="text-align: center; margin-bottom: 3rem;">
         <h1 style="border-bottom: none;">ALGORITMA & PEMROGRAMAN</h1>
         <p style="font-size: 2.2rem; font-weight: 500; background: linear-gradient(145deg,#075985,#1f4e8c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Kelas X – Semester II</p>
-        <div style="background: #0d2b45; color: white; padding: 2rem; border-radius: 60px; margin: 2rem 0;">
+        <div style="background: #0d2b45; color: black; padding: 2rem; border-radius: 60px; margin: 2rem 0;">
             <p style="font-size: 1.5rem;">“Karena Tuhanlah yang memberikan hikmat, dari mulut-Nya datang pengetahuan dan kepandaian”</p>
             <p>– Amsal 2:6 –</p>
         </div>
@@ -306,7 +119,7 @@
 
     <!-- BAB 2: DASAR PYTHON -->
     <section id="bab2">
-        <h2>Bab 2: Fondasi Python – Semua yang Perlu Kamu Tahu</h2>
+        <h2>Bab 2: Fondasi Python – Variabel, Tipe Data, Input/Output, Operator</h2>
         <p>Kita akan menggunakan <strong>Google Colab</strong> sebagai lingkungan coding. Buka <a href="https://colab.research.google.com" target="_blank">colab.research.google.com</a>, buat notebook baru. Setiap sel bisa diisi kode. Tekan <strong>Shift+Enter</strong> untuk menjalankan.</p>
 
         <h3>2.1 Variabel dan Tipe Data – Kotak Penyimpanan</h3>
@@ -367,12 +180,12 @@ print("Tahun depan usia Anda", usia + 1)</code></pre>
         <pre><code>usia_str = input("Masukkan usia: ")
 usia = int(usia_str)</code></pre>
 
-        <h4>Format Output yang Rapi dengan f-string (menggunakan {})</h4>
-        <p><strong>f-string</strong> (format string) adalah cara modern untuk menyisipkan variabel ke dalam string. Tanda <code>{}</code> digunakan sebagai tempat variabel.</p>
+        <h4>Format Output yang Rapi – f-string dan {}</h4>
+        <p><strong>f-string</strong> (format string) adalah cara modern untuk menyisipkan variabel ke dalam string. Tanda <code>{}</code> digunakan sebagai tempat variabel atau ekspresi.</p>
         <pre><code>nama = "Budi"
 umur = 16
-print(f"Nama saya {nama}, umur {umur} tahun.")  # lebih rapi dan mudah</code></pre>
-        <p><strong>Penjelasan:</strong> Huruf <code>f</code> sebelum petik menandakan f-string. Di dalam <code>{}</code> kita bisa menempatkan variabel atau bahkan ekspresi seperti <code>{umur+1}</code>.</p>
+print(f"Nama saya {nama}, umur {umur} tahun.")  # lebih rapi</code></pre>
+        <p><strong>Penjelasan:</strong> Huruf <code>f</code> sebelum petik menandakan f-string. Di dalam <code>{}</code> kita bisa menempatkan variabel atau ekspresi seperti <code>{umur+1}</code>.</p>
 
         <h4>Input Banyak Nilai Sekaligus</h4>
         <p>Kita bisa meminta beberapa input berturut-turut, atau menggunakan <code>split()</code> untuk memisahkan input dalam satu baris. Hasilnya berupa list (akan dibahas di bab 7).</p>
@@ -466,9 +279,7 @@ print(c)</code></pre>
         </div>
 
         <h3>2.4 Latihan Soal Terintegrasi (Input, Proses, Output)</h3>
-        <!-- Soal 2.1 s/d 2.5 seperti sebelumnya, dengan tombol jawaban -->
-        <!-- ... (saya akan sertakan semua soal yang sama, untuk efisiensi saya tulis singkat di sini, tapi di final akan lengkap) -->
-        <!-- Untuk keperluan contoh, saya tampilkan satu soal -->
+
         <div class="soal" id="soal2-1">
             <h4><i class="fas fa-puzzle-piece"></i> Soal 2.1 – Menghitung Luas dan Keliling Persegi Panjang</h4>
             <p>Buat program yang meminta panjang dan lebar (float), lalu menampilkan luas dan keliling. Gunakan f-string untuk output rapi.</p>
@@ -488,18 +299,158 @@ print(f"Luas = {luas}")
 print(f"Keliling = {keliling}")</code></pre>
             </div>
         </div>
-        <!-- Soal 2.2-2.5 akan sama, tapi saya lewati untuk ringkas -->
+
+        <div class="soal" id="soal2-2">
+            <h4><i class="fas fa-puzzle-piece"></i> Soal 2.2 – Konversi Suhu</h4>
+            <p>Buat program konversi suhu dari Celcius ke Fahrenheit, Reamur, dan Kelvin. Rumus: F = C*9/5+32, R = C*4/5, K = C+273.15. Minta input Celcius, lalu tampilkan ketiganya.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab2-2')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab2-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>C = float(input("Masukkan suhu Celcius: "))
+F = C * 9/5 + 32
+R = C * 4/5
+K = C + 273.15
+print(f"{C}°C = {F}°F")
+print(f"{C}°C = {R}°R")
+print(f"{C}°C = {K}K")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal2-3">
+            <h4><i class="fas fa-puzzle-piece"></i> Soal 2.3 – Menghitung Rata-rata</h4>
+            <p>Minta tiga nilai ujian (bisa desimal), lalu hitung rata-rata dan tampilkan dengan dua angka di belakang koma. Gunakan <code>:.2f</code> dalam f-string.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab2-3')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab2-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>a = float(input("Nilai 1: "))
+b = float(input("Nilai 2: "))
+c = float(input("Nilai 3: "))
+rata = (a + b + c) / 3
+print(f"Rata-rata = {rata:.2f}")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal2-4">
+            <h4><i class="fas fa-puzzle-piece"></i> Soal 2.4 – Menukar Nilai Dua Variabel</h4>
+            <p>Minta dua angka (misal a dan b). Tukar nilainya, lalu tampilkan setelah ditukar. Lakukan dengan dua cara: menggunakan variabel sementara, dan tanpa variabel sementara (hanya dengan operator aritmatika).</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab2-4')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab2-4">
+                <p><strong>Jawaban:</strong></p>
+                <p>Cara 1 (dengan variabel sementara):</p>
+                <pre><code>a = int(input("a: "))
+b = int(input("b: "))
+temp = a
+a = b
+b = temp
+print(f"Setelah ditukar: a = {a}, b = {b}")</code></pre>
+                <p>Cara 2 (dengan aritmatika):</p>
+                <pre><code>a = int(input("a: "))
+b = int(input("b: "))
+a = a + b
+b = a - b
+a = a - b
+print(f"Setelah ditukar: a = {a}, b = {b}")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal2-5">
+            <h4><i class="fas fa-puzzle-piece"></i> Soal 2.5 – Menghitung Diskon</h4>
+            <p>Minta total belanja. Jika total > 100000, beri diskon 10% dan tampilkan total setelah diskon. Jika tidak, tampilkan total biasa.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab2-5')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab2-5">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>total = float(input("Total belanja: Rp "))
+if total > 100000:
+    total = total * 0.9
+    print("Selamat, Anda mendapat diskon 10%!")
+print(f"Total yang harus dibayar: Rp {total:.2f}")</code></pre>
+            </div>
+        </div>
     </section>
 
     <!-- BAB 3: PERCABANGAN -->
     <section id="bab3">
         <h2>Bab 3: Percabangan – Membuat Keputusan</h2>
         <p>Dengan <code>if</code>, <code>elif</code>, <code>else</code>, program dapat memilih tindakan berdasarkan kondisi.</p>
-        <!-- Penjelasan detail if, elif, else, nested if -->
-        <!-- ... -->
+
+        <h3>3.1 If Tunggal</h3>
+        <p><strong>Contoh:</strong> Cek apakah suatu bilangan positif.</p>
+        <pre><code>angka = int(input("Masukkan bilangan: "))
+if angka > 0:
+    print("Bilangan positif")</code></pre>
+        <p>Jika angka <=0, tidak ada output.</p>
+
+        <h3>3.2 If-Else – Dua Cabang</h3>
+        <pre><code>angka = int(input("Masukkan bilangan: "))
+if angka % 2 == 0:
+    print("Genap")
+else:
+    print("Ganjil")</code></pre>
+        <p><strong>Mengapa pakai else?</strong> Karena bilangan pasti genap atau ganjil. Else mencakup semua kemungkinan yang tidak memenuhi if.</p>
+
+        <h3>3.3 If-Elif-Else – Banyak Kemungkinan</h3>
+        <pre><code>nilai = int(input("Masukkan nilai: "))
+if nilai >= 90:
+    grade = "A"
+elif nilai >= 80:
+    grade = "B"
+elif nilai >= 70:
+    grade = "C"
+elif nilai >= 60:
+    grade = "D"
+else:
+    grade = "E"
+print(f"Grade: {grade}")</code></pre>
+        <p>Perhatikan urutan: dari yang paling tinggi ke rendah. Jika dibalik, logikanya salah.</p>
+
+        <h3>3.4 Nested If (If di dalam If)</h3>
+        <p><strong>Contoh:</strong> Menentukan jenis segitiga.</p>
+        <pre><code>a = float(input("Sisi a: "))
+b = float(input("Sisi b: "))
+c = float(input("Sisi c: "))
+if a + b > c and a + c > b and b + c > a:
+    if a == b == c:
+        print("Segitiga sama sisi")
+    elif a == b or b == c or a == c:
+        print("Segitiga sama kaki")
+    else:
+        print("Segitiga sembarang")
+else:
+    print("Bukan segitiga")</code></pre>
+        <p>Pertama cek syarat segitiga, baru kemudian jenisnya.</p>
+
+        <h3>3.5 Studi Kasus: Aplikasi Tiket Bioskop</h3>
+        <p>Sebuah bioskop memiliki harga tiket:</p>
+        <ul>
+            <li>Anak-anak (usia < 12) : Rp25.000</li>
+            <li>Dewasa (12-59) : Rp50.000</li>
+            <li>Lansia (>=60) : Rp35.000</li>
+            <li>Hari Selasa diskon 10% untuk semua (kecuali anak-anak tetap dapat diskon)</li>
+        </ul>
+        <p>Minta input usia dan hari (misal 'Selasa' atau lainnya). Hitung harga akhir.</p>
+        <pre><code>usia = int(input("Usia: "))
+hari = input("Hari (misal Selasa atau lainnya): ")
+
+if usia < 12:
+    harga = 25000
+elif usia < 60:   # 12-59
+    harga = 50000
+else:
+    harga = 35000
+
+if hari.lower() == "selasa":
+    harga = harga * 0.9   # diskon 10%
+
+print(f"Harga tiket: Rp{int(harga)}")</code></pre>
+        <div class="insight">
+            <p><strong>🔍 Mengapa kita menggunakan elif usia < 60?</strong> Karena setelah usia <12, kita tahu usia >=12, jadi cukup cek <60 untuk mendapatkan rentang 12-59. Ini lebih efisien.</p>
+        </div>
+
+        <h3>3.6 Latihan Soal Percabangan</h3>
+
         <div class="soal" id="soal3-1">
             <h4><i class="fas fa-code-branch"></i> Soal 3.1 – Kalkulator Sederhana</h4>
-            <p>Buat program kalkulator yang menerima dua angka dan satu operator (+, -, *, /). Gunakan if-elif untuk memilih operasi. Jika operator tidak dikenal, tampilkan pesan error.</p>
+            <p>Buat program kalkulator yang menerima dua angka dan satu operator (+, -, *, /). Gunakan if-elif untuk memilih operasi. Jika operator tidak dikenal, tampilkan pesan error. (Gunakan input bertahap atau satu baris).</p>
             <button class="btn-jawaban" onclick="bukaJawaban('jawab3-1')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
             <div class="jawaban" id="jawab3-1">
                 <p><strong>Jawaban:</strong></p>
@@ -524,7 +475,56 @@ else:
 print("Hasil:", hasil)</code></pre>
             </div>
         </div>
-        <!-- Soal 3.2, 3.3 -->
+
+        <div class="soal" id="soal3-2">
+            <h4><i class="fas fa-code-branch"></i> Soal 3.2 – Tahun Kabisat</h4>
+            <p>Tahun kabisat adalah tahun yang habis dibagi 400, atau habis dibagi 4 tetapi tidak habis dibagi 100. Buat program yang meminta tahun dan menentukan apakah tahun tersebut kabisat.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab3-2')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab3-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>tahun = int(input("Masukkan tahun: "))
+if tahun % 400 == 0:
+    kabisat = True
+elif tahun % 100 == 0:
+    kabisat = False
+elif tahun % 4 == 0:
+    kabisat = True
+else:
+    kabisat = False
+
+if kabisat:
+    print(f"{tahun} adalah tahun kabisat")
+else:
+    print(f"{tahun} bukan tahun kabisat")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal3-3">
+            <h4><i class="fas fa-code-branch"></i> Soal 3.3 – Indeks Massa Tubuh (IMT)</h4>
+            <p>Rumus IMT = berat(kg) / (tinggi(m) ** 2). Minta berat dan tinggi, hitung IMT, lalu tentukan kategori:</p>
+            <ul>
+                <li>Kurus: IMT < 18.5</li>
+                <li>Normal: 18.5 - 24.9</li>
+                <li>Berlebih: 25 - 29.9</li>
+                <li>Obesitas: >= 30</li>
+            </ul>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab3-3')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab3-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>berat = float(input("Berat (kg): "))
+tinggi = float(input("Tinggi (m): "))
+imt = berat / (tinggi ** 2)
+if imt < 18.5:
+    kategori = "Kurus"
+elif imt < 25:
+    kategori = "Normal"
+elif imt < 30:
+    kategori = "Berlebih"
+else:
+    kategori = "Obesitas"
+print(f"IMT = {imt:.2f}, kategori: {kategori}")</code></pre>
+            </div>
+        </div>
     </section>
 
     <!-- BAB 4: PERULANGAN -->
@@ -532,18 +532,19 @@ print("Hasil:", hasil)</code></pre>
         <h2>Bab 4: Perulangan – Melakukan Pekerjaan Berulang</h2>
         
         <h3>4.1 While Loop</h3>
-        <p>Selama kondisi benar, blok kode dijalankan terus. Contoh: menampilkan angka 1-5.</p>
-        <pre><code>i = 1
+        <p>Selama kondisi benar, blok kode dijalankan terus.</p>
+        <pre><code># Menampilkan angka 1 sampai 5
+i = 1
 while i <= 5:
     print(i)
     i += 1   # jangan lupa increment, kalau tidak infinite loop</code></pre>
         <p><strong>Penjelasan:</strong> <code>i += 1</code> adalah cara singkat dari <code>i = i + 1</code>. Tanpa ini, nilai i akan tetap 1 dan loop berjalan selamanya.</p>
 
         <h3>4.2 For Loop dengan range()</h3>
-        <p><strong>Fungsi range()</strong> digunakan untuk menghasilkan urutan angka. Ada tiga bentuk:</p>
+        <p><strong>Fungsi range()</strong> digunakan untuk menghasilkan urutan angka. Ada tiga bentuk umum:</p>
         <ul>
-            <li><code>range(stop)</code> : menghasilkan angka 0 sampai stop-1. Contoh: <code>range(5)</code> → 0,1,2,3,4</li>
-            <li><code>range(start, stop)</code> : dari start sampai stop-1. <code>range(2, 6)</code> → 2,3,4,5</li>
+            <li><code>range(stop)</code> : menghasilkan angka dari 0 hingga stop-1. Contoh: <code>range(5)</code> → 0,1,2,3,4</li>
+            <li><code>range(start, stop)</code> : dari start hingga stop-1. <code>range(2, 6)</code> → 2,3,4,5</li>
             <li><code>range(start, stop, step)</code> : dengan langkah step. <code>range(1, 10, 2)</code> → 1,3,5,7,9</li>
         </ul>
         <p>Contoh penggunaan:</p>
@@ -565,13 +566,14 @@ for i in range(1,51):
         print(f"Ketemu: {i}")
         break   # loop berhenti setelah menemukan
 
-# Melewati angka genap (hanya menampilkan ganjil)
+# Melewati angka genap
 for i in range(1,11):
     if i % 2 == 0:
-        continue   # langsung ke iterasi berikutnya
+        continue
     print(i)   # hanya ganjil</code></pre>
 
         <h3>4.4 Latihan Soal Perulangan</h3>
+
         <div class="soal" id="soal4-1">
             <h4><i class="fas fa-redo-alt"></i> Soal 4.1 – Jumlah Deret</h4>
             <p>Minta n dari user, lalu hitung 1+2+...+n. Tampilkan hasil.</p>
@@ -585,7 +587,43 @@ for i in range(1, n+1):
 print(f"Jumlah 1 sampai {n} = {total}")</code></pre>
             </div>
         </div>
-        <!-- Soal 4.2, 4.3 -->
+
+        <div class="soal" id="soal4-2">
+            <h4><i class="fas fa-redo-alt"></i> Soal 4.2 – Pola Bintang</h4>
+            <p>Cetak segitiga siku-siku dengan tinggi sesuai input:</p>
+            <pre>*
+**
+***
+****</pre>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab4-2')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab4-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>tinggi = int(input("Tinggi segitiga: "))
+for i in range(1, tinggi+1):
+    print('*' * i)</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal4-3">
+            <h4><i class="fas fa-redo-alt"></i> Soal 4.3 – Tebak Angka</h4>
+            <p>Program memilih angka acak 1-100. User menebak, diberi petunjuk "terlalu kecil/besar" sampai benar. Tampilkan jumlah tebakan.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab4-3')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab4-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>import random
+angka = random.randint(1,100)
+tebakan = 0
+percobaan = 0
+while tebakan != angka:
+    tebakan = int(input("Tebak angka (1-100): "))
+    percobaan += 1
+    if tebakan < angka:
+        print("Terlalu kecil")
+    elif tebakan > angka:
+        print("Terlalu besar")
+print(f"Selamat! Tebakan benar dalam {percobaan} kali.")</code></pre>
+            </div>
+        </div>
     </section>
 
     <!-- BAB 5: FUNGSI -->
@@ -622,7 +660,7 @@ y = cetak_tambah(3, 4)  # y akan bernilai None (karena tidak ada return)
 print(y)                # None</code></pre>
         <p>Jadi, gunakan <code>return</code> jika kamu perlu menggunakan hasil perhitungan di tempat lain.</p>
 
-        <h3>5.3 Parameter Default dan Keyword Arguments</h3>
+        <h3>5.3 Parameter Default</h3>
         <p>Kita bisa memberi nilai default pada parameter, sehingga saat dipanggil bisa tanpa argumen.</p>
         <pre><code>def sapa_user(nama, pesan="Selamat belajar"):
     print(f"Halo {nama}, {pesan}!")
@@ -652,9 +690,10 @@ coba()
 print("luar fungsi:", nilai)   # tetap 5</code></pre>
 
         <h3>5.5 Latihan Soal Fungsi</h3>
+
         <div class="soal" id="soal5-1">
             <h4><i class="fas fa-code"></i> Soal 5.1 – Fungsi Luas Persegi</h4>
-            <p>Buat fungsi <code>luas_persegi(sisi)</code> yang mengembalikan luas persegi. Panggil dengan sisi=5 dan sisi=7.</p>
+            <p>Buat fungsi <code>luas_persegi(sisi)</code> yang mengembalikan luas persegi. Panggil dengan sisi=5 dan sisi=7, lalu tampilkan hasilnya.</p>
             <button class="btn-jawaban" onclick="bukaJawaban('jawab5-1')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
             <div class="jawaban" id="jawab5-1">
                 <p><strong>Jawaban:</strong></p>
@@ -665,10 +704,39 @@ print("Luas persegi sisi 5 =", luas_persegi(5))
 print("Luas persegi sisi 7 =", luas_persegi(7))</code></pre>
             </div>
         </div>
-        <!-- Soal 5.2, 5.3 -->
+
+        <div class="soal" id="soal5-2">
+            <h4><i class="fas fa-code"></i> Soal 5.2 – Fungsi dengan Parameter Default</h4>
+            <p>Buat fungsi <code>sapa_user(nama, pesan="Selamat belajar")</code> yang mencetak "Halo [nama], [pesan]!". Panggil dengan dua cara: hanya nama, dan dengan nama + pesan berbeda.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab5-2')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab5-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>def sapa_user(nama, pesan="Selamat belajar"):
+    print(f"Halo {nama}, {pesan}!")
+
+sapa_user("Dewi")
+sapa_user("Budi", "semangat ya")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal5-3">
+            <h4><i class="fas fa-code"></i> Soal 5.3 – Fungsi Menghitung Diskon</h4>
+            <p>Buat fungsi <code>hitung_diskon(total, persen)</code> yang mengembalikan total setelah diskon. Minta input total dan persen dari user, lalu panggil fungsi dan tampilkan hasilnya.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab5-3')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab5-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>def hitung_diskon(total, persen):
+    return total * (1 - persen/100)
+
+total = float(input("Total belanja: "))
+persen = float(input("Persen diskon: "))
+akhir = hitung_diskon(total, persen)
+print(f"Total setelah diskon: Rp{akhir:.2f}")</code></pre>
+            </div>
+        </div>
     </section>
 
-    <!-- BAB 6: PROYEK NILAI SISWA (dengan penjelasan global dan with open) -->
+    <!-- BAB 6: PROYEK NILAI SISWA -->
     <section id="bab6">
         <h2>Bab 6: Proyek Akhir – Aplikasi Pengelolaan Nilai Siswa</h2>
         <p>Program ini akan menyimpan data siswa (nama, nilai matematika, ipa, inggris) dalam list of dictionaries. Fitur: tambah, tampilkan semua, cari, nilai tertinggi, dan simpan/load file.</p>
@@ -814,7 +882,7 @@ campuran = ["teks", 123, True]</code></pre>
         <pre><code>buah[0]   # 'apel'
 buah[-1]  # 'jeruk'</code></pre>
 
-        <h3>7.3 Operasi List</h3>
+        <h3>7.3 Operasi Dasar List</h3>
         <ul>
             <li><code>append(x)</code> : tambah di akhir</li>
             <li><code>insert(i, x)</code> : sisip di indeks i</li>
@@ -847,27 +915,260 @@ for i, b in enumerate(buah):
     print(f"{i}: {b}")</code></pre>
         <p><code>enumerate</code> menghasilkan pasangan (indeks, nilai).</p>
 
-        <h3>7.6 Latihan Soal List</h3>
+        <h3>7.6 Studi Kasus: Mengelola Daftar Nilai</h3>
+        <pre><code># Input nilai
+nilai = []
+while True:
+    input_nilai = input("Masukkan nilai (atau ketik 'selesai'): ")
+    if input_nilai.lower() == 'selesai':
+        break
+    try:
+        nilai.append(float(input_nilai))
+    except:
+        print("Nilai tidak valid, masukkan angka.")
+
+if nilai:
+    print(f"Daftar nilai: {nilai}")
+    print(f"Rata-rata: {sum(nilai)/len(nilai):.2f}")
+    print(f"Nilai tertinggi: {max(nilai)}")
+    print(f"Nilai terendah: {min(nilai)}")
+else:
+    print("Tidak ada nilai yang dimasukkan.")</code></pre>
+
+        <h3>7.7 Latihan Soal Array (List)</h3>
+
         <div class="soal" id="soal7-1">
             <h4><i class="fas fa-list-ol"></i> Soal 7.1 – Dasar List</h4>
-            <p>Buat list 5 nama teman, lakukan manipulasi.</p>
+            <p>Buat list berisi 5 nama teman. Kemudian:</p>
+            <ol>
+                <li>Tampilkan nama pertama dan terakhir.</li>
+                <li>Ubah nama ketiga menjadi nama baru.</li>
+                <li>Tambahkan dua nama baru di akhir.</li>
+                <li>Hapus nama kedua.</li>
+                <li>Tampilkan semua nama dengan loop.</li>
+            </ol>
             <button class="btn-jawaban" onclick="bukaJawaban('jawab7-1')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
             <div class="jawaban" id="jawab7-1">
                 <p><strong>Jawaban:</strong></p>
                 <pre><code>teman = ["Andi", "Budi", "Cici", "Dodi", "Eka"]
-print(teman[0], teman[-1])
+print("Pertama:", teman[0])
+print("Terakhir:", teman[-1])
+
 teman[2] = "Citra"
+print("Setelah ubah indeks 2:", teman)
+
 teman.append("Fani")
-teman.pop(1)
+teman.append("Gita")
+print("Setelah tambah:", teman)
+
+teman.pop(1)  # hapus indeks 1 (Budi)
+print("Setelah hapus indeks 1:", teman)
+
+print("Semua teman:")
 for nama in teman:
     print("-", nama)</code></pre>
             </div>
         </div>
-        <!-- Soal 7.2-7.7 -->
+
+        <div class="soal" id="soal7-2">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.2 – Statistik Sederhana</h4>
+            <p>Minta user memasukkan 5 angka (bisa desimal), simpan dalam list. Hitung dan tampilkan:</p>
+            <ul>
+                <li>Jumlah total</li>
+                <li>Rata-rata</li>
+                <li>Nilai terbesar</li>
+                <li>Nilai terkecil</li>
+            </ul>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-2')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>angka = []
+for i in range(5):
+    n = float(input(f"Masukkan angka ke-{i+1}: "))
+    angka.append(n)
+
+total = sum(angka)
+rata = total / len(angka)
+terbesar = max(angka)
+terkecil = min(angka)
+
+print(f"Angka yang dimasukkan: {angka}")
+print(f"Total: {total}")
+print(f"Rata-rata: {rata:.2f}")
+print(f"Terbesar: {terbesar}")
+print(f"Terkecil: {terkecil}")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal7-3">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.3 – Filter Bilangan</h4>
+            <p>Buat program yang meminta user memasukkan 10 angka (boleh acak), lalu buat dua list baru:</p>
+            <ul>
+                <li>List genap (angka yang habis dibagi 2)</li>
+                <li>List ganjil (angka yang tidak habis dibagi 2)</li>
+            </ul>
+            <p>Tampilkan kedua list tersebut.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-3')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>angka = []
+for i in range(10):
+    n = int(input(f"Masukkan angka ke-{i+1}: "))
+    angka.append(n)
+
+genap = []
+ganjil = []
+for a in angka:
+    if a % 2 == 0:
+        genap.append(a)
+    else:
+        ganjil.append(a)
+
+print(f"Semua angka: {angka}")
+print(f"Angka genap: {genap}")
+print(f"Angka ganjil: {ganjil}")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal7-4">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.4 – Menghapus Duplikat</h4>
+            <p>Buat program yang meminta user memasukkan beberapa angka (hingga user mengetik 'selesai'). Kemudian hapus angka-angka yang duplikat (hanya sisakan satu kemunculan pertama). Tampilkan list setelah duplikat dihapus.</p>
+            <p><em>Petunjuk: Gunakan list baru untuk menyimpan angka yang belum pernah muncul.</em></p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-4')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-4">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>angka = []
+while True:
+    input_nilai = input("Masukkan angka (atau 'selesai'): ")
+    if input_nilai.lower() == 'selesai':
+        break
+    try:
+        angka.append(int(input_nilai))
+    except:
+        print("Masukkan angka yang valid.")
+
+print("Angka awal:", angka)
+
+unik = []
+for a in angka:
+    if a not in unik:
+        unik.append(a)
+
+print("Angka setelah duplikat dihapus:", unik)</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal7-5">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.5 – List Comprehension</h4>
+            <p>Gunakan list comprehension untuk:</p>
+            <ol>
+                <li>Membuat list bilangan kuadrat dari 1 sampai 15.</li>
+                <li>Membuat list bilangan yang habis dibagi 3 antara 1 sampai 50.</li>
+                <li>Dari list ["apel", "mangga", "jeruk", "anggur", "melon"], buat list baru yang berisi nama buah dengan panjang lebih dari 5 huruf.</li>
+            </ol>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-5')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-5">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code># 1. Kuadrat 1-15
+kuadrat = [x**2 for x in range(1, 16)]
+print("Kuadrat 1-15:", kuadrat)
+
+# 2. Habis dibagi 3 antara 1-50
+kelipatan3 = [x for x in range(1, 51) if x % 3 == 0]
+print("Kelipatan 3 (1-50):", kelipatan3)
+
+# 3. Buah dengan panjang > 5
+buah = ["apel", "mangga", "jeruk", "anggur", "melon"]
+buah_panjang = [b for b in buah if len(b) > 5]
+print("Buah dengan >5 huruf:", buah_panjang)</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal7-6">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.6 – Matriks Sederhana (List of Lists)</h4>
+            <p>Buat list 2 dimensi (list di dalam list) yang merepresentasikan matriks 3x3. Minta user mengisi nilai untuk setiap elemen. Kemudian:</p>
+            <ul>
+                <li>Tampilkan matriks dalam format baris dan kolom.</li>
+                <li>Hitung jumlah semua elemen.</li>
+                <li>Tampilkan elemen pada baris 1 kolom 2 (indeks [0][1]) dan baris 3 kolom 3 (indeks [2][2]).</li>
+            </ul>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-6')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-6">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code># Inisialisasi matriks 3x3
+matriks = []
+for i in range(3):
+    baris = []
+    for j in range(3):
+        nilai = int(input(f"Masukkan nilai baris {i+1} kolom {j+1}: "))
+        baris.append(nilai)
+    matriks.append(baris)
+
+print("\nMatriks yang dimasukkan:")
+for baris in matriks:
+    for nilai in baris:
+        print(nilai, end="\t")
+    print()
+
+total = 0
+for baris in matriks:
+    total += sum(baris)
+print(f"Jumlah semua elemen: {total}")
+
+print(f"Baris 1 kolom 2: {matriks[0][1]}")
+print(f"Baris 3 kolom 3: {matriks[2][2]}")</code></pre>
+            </div>
+        </div>
+
+        <div class="soal" id="soal7-7">
+            <h4><i class="fas fa-list-ol"></i> Soal 7.7 – Gabungan dengan Fungsi</h4>
+            <p>Buat fungsi berikut:</p>
+            <ul>
+                <li><code>rata_rata(list_angka)</code> : mengembalikan rata-rata</li>
+                <li><code>nilai_maksimal(list_angka)</code> : mengembalikan nilai maks (tanpa max bawaan)</li>
+                <li><code>nilai_minimal(list_angka)</code> : mengembalikan nilai min (tanpa min bawaan)</li>
+            </ul>
+            <p>Kemudian dalam program utama, minta user memasukkan 5 angka, panggil ketiga fungsi tersebut dan tampilkan hasilnya.</p>
+            <button class="btn-jawaban" onclick="bukaJawaban('jawab7-7')"><i class="fas fa-lock"></i> Lihat Jawaban</button>
+            <div class="jawaban" id="jawab7-7">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>def rata_rata(lst):
+    return sum(lst) / len(lst) if lst else 0
+
+def nilai_maksimal(lst):
+    if not lst:
+        return None
+    maks = lst[0]
+    for n in lst:
+        if n > maks:
+            maks = n
+    return maks
+
+def nilai_minimal(lst):
+    if not lst:
+        return None
+    min = lst[0]
+    for n in lst:
+        if n < min:
+            min = n
+    return min
+
+# Program utama
+angka = []
+for i in range(5):
+    n = float(input(f"Masukkan angka ke-{i+1}: "))
+    angka.append(n)
+
+print(f"Angka: {angka}")
+print(f"Rata-rata: {rata_rata(angka):.2f}")
+print(f"Nilai maksimal: {nilai_maksimal(angka)}")
+print(f"Nilai minimal: {nilai_minimal(angka)}")</code></pre>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 MGMP Informatika PPPK PETRA – Modul ini dapat digunakan untuk pembelajaran mandiri.</p>
+        <p>© 2026 @Bennyradeon – Modul ini dapat digunakan untuk pembelajaran mandiri.</p>
         <p><i class="fas fa-heart" style="color:#c44545;"></i> Teruslah belajar, Tuhan memberkati.</p>
     </footer>
 </div>
