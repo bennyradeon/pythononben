@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modul Fundamental Python | Algoritma & Pemrograman</title>
+    <title>Modul Algoritma & Pemrograman Python | Kunci Jawaban Terproteksi</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,12 +114,38 @@
             padding: 1.8rem 2.2rem;
             border-radius: 24px;
             margin: 2.5rem 0;
+            position: relative;
         }
         .soal h4 {
             color: #0b6e4f;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        .jawaban {
+            background: #f1f9f9;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #10b981;
+            display: none;
+        }
+        .jawaban p {
+            margin-bottom: 0.5rem;
+        }
+        .btn-jawaban {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.8rem;
+            transition: 0.2s;
+        }
+        .btn-jawaban:hover {
+            background: #0d9e6e;
         }
         .insight {
             background: #eef2fb;
@@ -157,6 +183,8 @@
             display: inline-block;
             margin: 1rem 0;
             transition: 0.2s;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
             background: #1d4ed8;
@@ -199,6 +227,13 @@
             padding: 1.5rem;
             margin: 1.5rem 0;
         }
+        .password-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #e9ebf0;
+            border-radius: 60px;
+        }
     </style>
 </head>
 <body>
@@ -207,7 +242,7 @@
     <div style="text-align: center; margin-bottom: 3rem;">
         <h1 style="border-bottom: none;">ALGORITMA & PEMROGRAMAN</h1>
         <p style="font-size: 2.2rem; font-weight: 500; background: linear-gradient(145deg,#075985,#1f4e8c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Kelas X – Semester II</p>
-        <div style="background: #f516b9; color: rgb(15, 15, 15); padding: 2rem; border-radius: 60px; margin: 2rem 0;">
+        <div style="background: #0d2b45; color: white; padding: 2rem; border-radius: 60px; margin: 2rem 0;">
             <p style="font-size: 1.5rem;">“Karena Tuhanlah yang memberikan hikmat, dari mulut-Nya datang pengetahuan dan kepandaian”</p>
             <p>– Amsal 2:6 –</p>
         </div>
@@ -218,6 +253,10 @@
             <a href="#bab4">Bab 4 Perulangan</a>
             <a href="#bab5">Bab 5 List & Fungsi</a>
             <a href="#bab6">Bab 6 Proyek</a>
+        </div>
+        <div class="password-section">
+            <button id="unlockButton" class="btn"><i class="fas fa-lock"></i> Buka Kunci Jawaban (Password: davinci@@)</button>
+            <p id="passwordStatus" style="margin-top: 0.5rem; color: #2563eb;"></p>
         </div>
     </div>
 
@@ -233,6 +272,43 @@
 5. Tampilkan luas
 6. Selesai</code></pre>
         <p>Nanti kita akan terjemahkan ke Python. Fokus kita di modul ini adalah <strong>pemrograman Python</strong>, tapi selalu ingat algoritma di belakangnya.</p>
+
+        <div class="soal">
+            <h4><i class="fas fa-pencil-alt"></i> Soal 1.1</h4>
+            <p>Buat algoritma untuk:</p>
+            <ol>
+                <li>Mencari bilangan terbesar dari tiga angka.</li>
+                <li>Menghitung rata-rata tiga nilai ujian.</li>
+                <li>Menentukan apakah suatu tahun adalah tahun kabisat.</li>
+            </ol>
+            <div class="jawaban" id="jawab1">
+                <p><strong>Jawaban:</strong></p>
+                <p>1. Algoritma mencari bilangan terbesar dari tiga angka:<br>
+                1. Mulai<br>
+                2. Masukkan a, b, c<br>
+                3. Jika a > b dan a > c maka terbesar = a<br>
+                4. Jika b > a dan b > c maka terbesar = b<br>
+                5. Jika c > a dan c > b maka terbesar = c<br>
+                6. Tampilkan terbesar<br>
+                7. Selesai</p>
+                <p>2. Algoritma rata-rata tiga nilai:<br>
+                1. Mulai<br>
+                2. Masukkan nilai1, nilai2, nilai3<br>
+                3. jumlah = nilai1 + nilai2 + nilai3<br>
+                4. rata = jumlah / 3<br>
+                5. Tampilkan rata<br>
+                6. Selesai</p>
+                <p>3. Algoritma tahun kabisat:<br>
+                1. Mulai<br>
+                2. Masukkan tahun<br>
+                3. Jika tahun % 400 == 0 maka kabisat = benar<br>
+                4. Jika tahun % 100 == 0 maka kabisat = salah<br>
+                5. Jika tahun % 4 == 0 maka kabisat = benar<br>
+                6. Jika tidak, kabisat = salah<br>
+                7. Tampilkan "kabisat" atau "bukan"<br>
+                8. Selesai</p>
+            </div>
+        </div>
     </section>
 
     <!-- Bab 2: Dasar Python - sangat detail -->
@@ -407,26 +483,78 @@ print(c)</code></pre>
 Masukkan lebar: 3
 Luas = 16.5
 Keliling = 17.0</code></pre>
+            <div class="jawaban" id="jawab2-1">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>p = float(input("Masukkan panjang: "))
+l = float(input("Masukkan lebar: "))
+luas = p * l
+keliling = 2 * (p + l)
+print(f"Luas = {luas}")
+print(f"Keliling = {keliling}")</code></pre>
+            </div>
         </div>
 
         <div class="soal">
             <h4><i class="fas fa-puzzle-piece"></i> Soal 2.2 – Konversi Suhu</h4>
             <p>Buat program konversi suhu dari Celcius ke Fahrenheit, Reamur, dan Kelvin. Rumus: F = C*9/5+32, R = C*4/5, K = C+273.15. Minta input Celcius, lalu tampilkan ketiganya.</p>
+            <div class="jawaban" id="jawab2-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>C = float(input("Masukkan suhu Celcius: "))
+F = C * 9/5 + 32
+R = C * 4/5
+K = C + 273.15
+print(f"{C}°C = {F}°F")
+print(f"{C}°C = {R}°R")
+print(f"{C}°C = {K}K")</code></pre>
+            </div>
         </div>
 
         <div class="soal">
             <h4><i class="fas fa-puzzle-piece"></i> Soal 2.3 – Menghitung Rata-rata</h4>
             <p>Minta tiga nilai ujian (bisa desimal), lalu hitung rata-rata dan tampilkan dengan dua angka di belakang koma. Gunakan <code>:.2f</code> dalam f-string.</p>
+            <div class="jawaban" id="jawab2-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>a = float(input("Nilai 1: "))
+b = float(input("Nilai 2: "))
+c = float(input("Nilai 3: "))
+rata = (a + b + c) / 3
+print(f"Rata-rata = {rata:.2f}")</code></pre>
+            </div>
         </div>
 
         <div class="soal">
             <h4><i class="fas fa-puzzle-piece"></i> Soal 2.4 – Menukar Nilai Dua Variabel</h4>
             <p>Minta dua angka (misal a dan b). Tukar nilainya, lalu tampilkan setelah ditukar. Lakukan dengan dua cara: menggunakan variabel sementara, dan tanpa variabel sementara (hanya dengan operator aritmatika).</p>
+            <div class="jawaban" id="jawab2-4">
+                <p><strong>Jawaban:</strong></p>
+                <p>Cara 1 (dengan variabel sementara):</p>
+                <pre><code>a = int(input("a: "))
+b = int(input("b: "))
+temp = a
+a = b
+b = temp
+print(f"Setelah ditukar: a = {a}, b = {b}")</code></pre>
+                <p>Cara 2 (dengan aritmatika):</p>
+                <pre><code>a = int(input("a: "))
+b = int(input("b: "))
+a = a + b
+b = a - b
+a = a - b
+print(f"Setelah ditukar: a = {a}, b = {b}")</code></pre>
+            </div>
         </div>
 
         <div class="soal">
             <h4><i class="fas fa-puzzle-piece"></i> Soal 2.5 – Menghitung Diskon</h4>
             <p>Minta total belanja. Jika total > 100000, beri diskon 10% dan tampilkan total setelah diskon. Jika tidak, tampilkan total biasa.</p>
+            <div class="jawaban" id="jawab2-5">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>total = float(input("Total belanja: Rp "))
+if total > 100000:
+    total = total * 0.9
+    print("Selamat, Anda mendapat diskon 10%!")
+print(f"Total yang harus dibayar: Rp {total:.2f}")</code></pre>
+            </div>
         </div>
     </section>
 
@@ -512,11 +640,52 @@ print(f"Harga tiket: Rp{int(harga)}")</code></pre>
         <div class="soal">
             <h4><i class="fas fa-code-branch"></i> Soal 3.1 – Kalkulator Sederhana</h4>
             <p>Buat program kalkulator yang menerima dua angka dan satu operator (+, -, *, /). Gunakan if-elif untuk memilih operasi. Jika operator tidak dikenal, tampilkan pesan error. (Gunakan input bertahap atau satu baris).</p>
+            <div class="jawaban" id="jawab3-1">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>a = float(input("Angka pertama: "))
+b = float(input("Angka kedua: "))
+op = input("Operator (+, -, *, /): ")
+
+if op == "+":
+    hasil = a + b
+elif op == "-":
+    hasil = a - b
+elif op == "*":
+    hasil = a * b
+elif op == "/":
+    if b != 0:
+        hasil = a / b
+    else:
+        hasil = "Error: pembagian dengan nol"
+else:
+    hasil = "Operator tidak dikenal"
+
+print("Hasil:", hasil)</code></pre>
+            </div>
         </div>
+
         <div class="soal">
             <h4><i class="fas fa-code-branch"></i> Soal 3.2 – Tahun Kabisat</h4>
             <p>Tahun kabisat adalah tahun yang habis dibagi 400, atau habis dibagi 4 tetapi tidak habis dibagi 100. Buat program yang meminta tahun dan menentukan apakah tahun tersebut kabisat.</p>
+            <div class="jawaban" id="jawab3-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>tahun = int(input("Masukkan tahun: "))
+if tahun % 400 == 0:
+    kabisat = True
+elif tahun % 100 == 0:
+    kabisat = False
+elif tahun % 4 == 0:
+    kabisat = True
+else:
+    kabisat = False
+
+if kabisat:
+    print(f"{tahun} adalah tahun kabisat")
+else:
+    print(f"{tahun} bukan tahun kabisat")</code></pre>
+            </div>
         </div>
+
         <div class="soal">
             <h4><i class="fas fa-code-branch"></i> Soal 3.3 – Indeks Massa Tubuh (IMT)</h4>
             <p>Rumus IMT = berat(kg) / (tinggi(m) ** 2). Minta berat dan tinggi, hitung IMT, lalu tentukan kategori:</p>
@@ -526,6 +695,21 @@ print(f"Harga tiket: Rp{int(harga)}")</code></pre>
                 <li>Berlebih: 25 - 29.9</li>
                 <li>Obesitas: >= 30</li>
             </ul>
+            <div class="jawaban" id="jawab3-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>berat = float(input("Berat (kg): "))
+tinggi = float(input("Tinggi (m): "))
+imt = berat / (tinggi ** 2)
+if imt < 18.5:
+    kategori = "Kurus"
+elif imt < 25:
+    kategori = "Normal"
+elif imt < 30:
+    kategori = "Berlebih"
+else:
+    kategori = "Obesitas"
+print(f"IMT = {imt:.2f}, kategori: {kategori}")</code></pre>
+            </div>
         </div>
     </section>
 
@@ -568,7 +752,16 @@ for i in range(1,11):
         <div class="soal">
             <h4><i class="fas fa-redo-alt"></i> Soal 4.1 – Jumlah Deret</h4>
             <p>Minta n dari user, lalu hitung 1+2+...+n. Tampilkan hasil.</p>
+            <div class="jawaban" id="jawab4-1">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>n = int(input("Masukkan n: "))
+total = 0
+for i in range(1, n+1):
+    total += i
+print(f"Jumlah 1 sampai {n} = {total}")</code></pre>
+            </div>
         </div>
+
         <div class="soal">
             <h4><i class="fas fa-redo-alt"></i> Soal 4.2 – Pola Bintang</h4>
             <p>Cetak segitiga siku-siku dengan tinggi sesuai input:</p>
@@ -576,10 +769,32 @@ for i in range(1,11):
 **
 ***
 ****</pre>
+            <div class="jawaban" id="jawab4-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>tinggi = int(input("Tinggi segitiga: "))
+for i in range(1, tinggi+1):
+    print('*' * i)</code></pre>
+            </div>
         </div>
+
         <div class="soal">
             <h4><i class="fas fa-redo-alt"></i> Soal 4.3 – Tebak Angka</h4>
             <p>Program memilih angka acak 1-100. User menebak, diberi petunjuk "terlalu kecil/besar" sampai benar. Tampilkan jumlah tebakan.</p>
+            <div class="jawaban" id="jawab4-3">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>import random
+angka = random.randint(1,100)
+tebakan = 0
+percobaan = 0
+while tebakan != angka:
+    tebakan = int(input("Tebak angka (1-100): "))
+    percobaan += 1
+    if tebakan < angka:
+        print("Terlalu kecil")
+    elif tebakan > angka:
+        print("Terlalu besar")
+print(f"Selamat! Tebakan benar dalam {percobaan} kali.")</code></pre>
+            </div>
         </div>
     </section>
 
@@ -614,10 +829,89 @@ print(luas_lingkaran(7))</code></pre>
         <div class="soal">
             <h4><i class="fas fa-list"></i> Soal 5.1 – Daftar Belanja</h4>
             <p>Buat program daftar belanja dengan menu: tambah item, hapus item, tampilkan daftar, keluar. Gunakan list dan fungsi untuk setiap opsi.</p>
+            <div class="jawaban" id="jawab5-1">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>belanja = []
+
+def tambah():
+    item = input("Item: ")
+    belanja.append(item)
+    print(f"{item} ditambahkan.")
+
+def hapus():
+    item = input("Item yang dihapus: ")
+    if item in belanja:
+        belanja.remove(item)
+        print(f"{item} dihapus.")
+    else:
+        print("Item tidak ditemukan.")
+
+def tampil():
+    if belanja:
+        print("Daftar belanja:")
+        for i, item in enumerate(belanja, 1):
+            print(f"{i}. {item}")
+    else:
+        print("Daftar kosong.")
+
+def menu():
+    while True:
+        print("\n1. Tambah\n2. Hapus\n3. Tampilkan\n4. Keluar")
+        pilih = input("Pilih: ")
+        if pilih == '1':
+            tambah()
+        elif pilih == '2':
+            hapus()
+        elif pilih == '3':
+            tampil()
+        elif pilih == '4':
+            break
+        else:
+            print("Pilihan salah.")
+
+menu()</code></pre>
+            </div>
         </div>
+
         <div class="soal">
             <h4><i class="fas fa-list"></i> Soal 5.2 – Fungsi Matematika</h4>
             <p>Buat fungsi untuk menghitung luas persegi, persegi panjang, segitiga. Panggil dalam program utama dengan pilihan menu.</p>
+            <div class="jawaban" id="jawab5-2">
+                <p><strong>Jawaban:</strong></p>
+                <pre><code>def luas_persegi(s):
+    return s * s
+
+def luas_persegi_panjang(p, l):
+    return p * l
+
+def luas_segitiga(a, t):
+    return 0.5 * a * t
+
+def menu():
+    while True:
+        print("\n1. Luas Persegi")
+        print("2. Luas Persegi Panjang")
+        print("3. Luas Segitiga")
+        print("4. Keluar")
+        p = input("Pilih: ")
+        if p == '1':
+            s = float(input("Sisi: "))
+            print("Luas =", luas_persegi(s))
+        elif p == '2':
+            p = float(input("Panjang: "))
+            l = float(input("Lebar: "))
+            print("Luas =", luas_persegi_panjang(p, l))
+        elif p == '3':
+            a = float(input("Alas: "))
+            t = float(input("Tinggi: "))
+            print("Luas =", luas_segitiga(a, t))
+        elif p == '4':
+            break
+        else:
+            print("Pilihan salah.")
+
+menu()</code></pre>
+            </div>
         </div>
     </section>
 
@@ -681,13 +975,56 @@ if __name__ == "__main__":
         <div class="soal">
             <h4><i class="fas fa-rocket"></i> Tugas Proyek</h4>
             <p>Kembangkan aplikasi di atas dengan menambahkan fitur: ubah data, hapus data, dan simpan/load data ke file teks.</p>
+            <div class="jawaban" id="jawab6">
+                <p><strong>Jawaban (fitur tambahan):</strong></p>
+                <p>Fitur ubah dan hapus dapat ditambahkan dengan mudah. Untuk penyimpanan file, gunakan modul pickle atau json. Berikut contoh sederhana penyimpanan ke file json:</p>
+                <pre><code>import json
+
+def simpan():
+    with open("data_siswa.json", "w") as f:
+        json.dump(data_siswa, f)
+    print("Data tersimpan ke file.")
+
+def muat():
+    global data_siswa
+    try:
+        with open("data_siswa.json", "r") as f:
+            data_siswa = json.load(f)
+        print("Data dimuat dari file.")
+    except FileNotFoundError:
+        print("File tidak ditemukan.")</code></pre>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Guru Informatika @Benny, S.Kom – Modul ini dapat digunakan untuk pembelajaran mandiri.</p>
+        <p>© 2025 MGMP Informatika PPPK PETRA – Modul ini dapat digunakan untuk pembelajaran mandiri.</p>
         <p><i class="fas fa-heart" style="color:#c44545;"></i> Teruslah belajar, Tuhan memberkati.</p>
     </footer>
 </div>
+
+<script>
+    // Password protection for answers
+    const correctPassword = "davinci@@";
+    let unlocked = false;
+
+    document.getElementById('unlockButton').addEventListener('click', function() {
+        if (unlocked) {
+            // Jika sudah terbuka, beri tahu
+            document.getElementById('passwordStatus').innerText = 'Jawaban sudah terbuka.';
+            return;
+        }
+        const password = prompt("Masukkan password untuk membuka kunci jawaban:");
+        if (password === correctPassword) {
+            // Tampilkan semua jawaban
+            const answers = document.querySelectorAll('.jawaban');
+            answers.forEach(ans => ans.style.display = 'block');
+            unlocked = true;
+            document.getElementById('passwordStatus').innerHTML = '<i class="fas fa-unlock"></i> Jawaban terbuka. Selamat belajar!';
+        } else {
+            alert("Password salah!");
+        }
+    });
+</script>
 </body>
 </html>
